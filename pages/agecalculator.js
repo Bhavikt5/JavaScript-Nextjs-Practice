@@ -8,20 +8,15 @@ const agecalculator = () => {
   const [day, setday] = useState("");
   const [month, setmonth] = useState("");
   const [year, setyear] = useState("");
-  const [input, setinput] = useState("");
+  // const [input, setinput] = useState("");
 
   const selectedDate = new Date(date);
   const currDate = new Date();
   const currentDate = `${currDate.getFullYear()}-${currDate.getMonth()}-${currDate.getDate()}`;
 
-  // --------------
-
   // month ---------
-
   const sM = 12 - (selectedDate.getMonth() + 1);
   const sM1 = currDate.getMonth() - selectedDate.getMonth() + 1;
-
-  // -------------
 
   const getCurrDate = new Date(currentDate);
   const diffTime = Math.abs(getCurrDate - selectedDate);
@@ -56,23 +51,14 @@ const agecalculator = () => {
           <p style={{ textAlign: "center", color: "white" }}>
             Enter Date Of Birth
           </p>
-          <input
-            type="date"
-            onChange={(i) => setdate(i.target.value)}
-            value={input}
-          />
+          <input type="date" onChange={(i) => setdate(i.target.value)} />
         </div>
 
         <div>
-          <button
-            onClick={() => {
-              setinput("");
-              setShowResult(false);
-            }}
-          >
-            Reset
+          <button onClick={() => setShowResult(false)}>Reset</button>
+          <button onClick={findDate} type="submit">
+            Calculate
           </button>
-          <button onClick={findDate}>Calculate</button>
         </div>
 
         {!showResult ? null : (
