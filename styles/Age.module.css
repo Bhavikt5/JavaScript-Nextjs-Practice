@@ -1,0 +1,43 @@
+.curAgeCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(101, 69, 69, 0.3);
+  margin-top: 50px;
+  padding: 20px 30px;
+  border-radius: 20px;
+}
+
+.curAgeInputCon {
+  display: flex;
+  gap: 20px;
+}
+
+.curAgeInputInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.curAgeInputInner input {
+  width: 60px;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.curAgeInputInner label {
+  color: aliceblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title {
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+}
