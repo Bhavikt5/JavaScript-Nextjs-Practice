@@ -1,5 +1,7 @@
 import Head from "next/head";
+import Link from "next/link";
 import React from "react";
+import WebsiteCard from "../components/WebsiteCard";
 
 const Home = () => {
   return (
@@ -14,13 +16,27 @@ const Home = () => {
       </Head>
 
       <div className="home">
-        <h1>Welcome to Home</h1>
-        <button>
-          <a href="/percentage">Percentage</a>
-        </button>
-        <button>
-          <a href="/agecalculator">Age Calculator</a>
-        </button>
+        <section>
+          <h1>Welcome to Home</h1>
+          <button>
+            <Link href="/percentage">Percentage</Link>
+          </button>
+          <button>
+            <Link href="/agecalculator">Age Calculator</Link>
+          </button>
+        </section>
+
+        <section className="websiteSection">
+          <h1>Website Demo</h1>
+          <div className="websiteCard">
+            <WebsiteCard link="/todolist/todolist" name="Website Demo" />
+            <WebsiteCard link="/home" name="Website Demo" />
+            <WebsiteCard link="/home" name="Website Demo" />
+            <WebsiteCard link="/home" name="Website Demo" />
+            <WebsiteCard link="/home" name="Website Demo" />
+            <WebsiteCard link="/home" name="Website Demo" />
+          </div>
+        </section>
       </div>
     </>
   );

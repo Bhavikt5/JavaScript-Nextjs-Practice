@@ -1,0 +1,20 @@
+.container {
+  padding: 20px 20px;
+  background-color: var(--white);
+  color: var(--red);
+  border-radius: 10px;
+  cursor: pointer;
+  border: 5px solid var(--red);
+  transition: 0.3s ease;
+}
+
+.container:hover {
+  background-color: var(--lightGreen);
+  border: 5px solid green;
+  transform: translateY(-5px);
+}
+
+.container h3 {
+  color: var(--red);
+  font-size: 1.5rem;
+}
